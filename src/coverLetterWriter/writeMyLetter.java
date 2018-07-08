@@ -1,6 +1,6 @@
 package coverLetterWriter;
 
-public class writeMyLetter {
+public class writeMyLetter extends getUserInput {
 
 	static String name = "";
 	static String roleTitle = "";
@@ -27,6 +27,7 @@ public class writeMyLetter {
 	
 	public static void main(String[] args) {
 		// run program that prints user input 
+		getInput();
 		name = args[0];
 		roleTitle = args[1];
 		company = args[2];
