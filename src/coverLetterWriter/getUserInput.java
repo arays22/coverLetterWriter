@@ -11,4 +11,10 @@ public class getUserInput {
 		System.out.println("What is one project on your resume that aligns with the"
 				+ "requirements of the advertised role?");
 	}
+	
+	public static void printCoverLetter(String name, String roleTitle, String company,
+			String personalCharac, String companyValue, String keyExperiences) {
+		
+		
+	}
 }
