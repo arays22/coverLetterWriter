@@ -2,7 +2,14 @@ package coverLetterWriter;
 
 public class writeMyLetter {
 
-	String cover = "Dear [name]: I’m writing in response to your recently advertised "
+	static String name = "";
+	static String roleTitle = "";
+	static String company = "";
+	static String personalCharac = "";
+	static String companyValue = "";
+	static String keyExperiences = "";
+	
+	String cover = "Dear + name I’m writing in response to your recently advertised "
 			+ "position for a [role title]. I am very interested in this opportunity with "
 			+ "[company] and believe that my qualifications, education and professional "
 			+ "experience would make me a strong candidate for the position.I am a "
@@ -19,6 +26,12 @@ public class writeMyLetter {
 			+ "advance for your consideration.Kind regards,[Your name]";
 	
 	public static void main(String[] args) {
-		
+		// run program that prints user input 
+		name = args[0];
+		roleTitle = args[1];
+		company = args[2];
+		personalCharac = args[3];
+		companyValue = args[4];
+		keyExperiences = args[5];
 	}
 }
