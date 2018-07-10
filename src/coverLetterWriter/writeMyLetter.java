@@ -1,5 +1,7 @@
 package coverLetterWriter;
 
+import java.io.IOException;
+
 public class writeMyLetter extends getUserInput {
 
 	static String name = "";
@@ -11,14 +13,9 @@ public class writeMyLetter extends getUserInput {
 	
 
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// run program that prints user input 
 		getInput();
-		name = args[0];
-		roleTitle = args[1];
-		company = args[2];
-		personalCharac = args[3];
-		companyValue = args[4];
-		keyExperiences = args[5];
+		System.out.println(printCoverLetter(args[0], args[1], args[2], args[3], args[4], args[5]));
 	}
 }
