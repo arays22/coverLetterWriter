@@ -20,7 +20,7 @@ public class getUserInput  {
 			+ "could help [insert name of company] achieve its goals.Thank you in "
 			+ "advance for your consideration.Kind regards,[Your name]";
 	
-	public static void getInput() throws IOException {
+	/**public static void getInput() throws IOException {
 		System.out.println("What is your name?");
 		BufferedReader name = new BufferedReader(new InputStreamReader(System.in));
 		String userName = name.readLine();
@@ -40,7 +40,7 @@ public class getUserInput  {
 				+ "requirements of the advertised role?");
 		BufferedReader project = new BufferedReader(new InputStreamReader(System.in));
 		String userProject = project.readLine();
-	}
+	} **/
 	
 	public static String printCoverLetter(String name, String roleTitle, String company,
 			String personalCharac, String companyValue, String keyExperiences) {
