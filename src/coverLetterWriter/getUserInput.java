@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class getUserInput  {
 
@@ -42,16 +43,32 @@ public class getUserInput  {
 		String userProject = project.readLine();
 	} **/
 	
+	static String replaceAllWords2(String original, String find, String replacement) {
+	    StringBuilder result = new StringBuilder(original.length());
+	    String delimiters = "+-*/(),. ";
+	    StringTokenizer st = new StringTokenizer(original, delimiters, true);
+	    while (st.hasMoreTokens()) {
+	        String w = st.nextToken();
+	        if (w.equals(find)) {
+	            result.append(replacement);
+	        } else {
+	            result.append(w);
+	        }
+	    }
+	    return result.toString();
+	}
+	
 	public static String printCoverLetter(String name, String roleTitle, String company,
 			String personalCharac, String companyValue, String keyExperiences) {
-		cover.replace("[name]", name);
-		cover.replace("[role title]", roleTitle);
-		cover.replace("[company]", company);
-		cover.replace("[insert personal characteristics]", personalCharac);
-		cover.replace("[value to company]", companyValue);
-		cover.replace("[key experiences]", keyExperiences);
 		
-		return cover;
+		String cover1 = replaceAllWords2(cover, "[name]", name);
+		String cover2 = replaceAllWords2(cover1, "[role title]", roleTitle);
+		String cover3 = replaceAllWords2(cover2, "[company]", company);
+		String cover4 = replaceAllWords2(cover3, "[insert personal characteristics]", personalCharac);
+		String cover5 = replaceAllWords2(cover4, "[value to company]", companyValue);
+		String cover6 = replaceAllWords2(cover5, "[key experiences]", keyExperiences);
+		
+		return cover6;
 		
 		
 	}
